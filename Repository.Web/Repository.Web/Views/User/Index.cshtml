@@ -1,0 +1,159 @@
+﻿@model IEnumerable<Repository.Service.ViewModels.UserViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegisterDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApprovedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastSeenDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublishedNewsCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalNewsCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VerificationCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhotoUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserRole)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserGuid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShowOnWebSite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsReplacement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AboutUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExtraPoint)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasSuperadminPriviligies)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasModerationPriviligies)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsExTeamMember)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegisterDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastSeenDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PublishedNewsCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalNewsCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VerificationCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhotoUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserRole)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserGuid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShowOnWebSite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsReplacement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AboutUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExtraPoint)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HasSuperadminPriviligies)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HasModerationPriviligies)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsExTeamMember)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
